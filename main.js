@@ -1,7 +1,4 @@
-const dd=document.getElementById("Date").value;
 
-const mm=document.querySelector(".Month").value;
-const yyyy=document.querySelector(".Year").value;
 const Submit=document.querySelector("button");
 
 
@@ -9,6 +6,10 @@ var Dob=`00-00-0000 `;
 Submit.addEventListener("click",function(event){
 
 event.preventDefault();
+const dd=document.getElementById("Date").value;
+
+const mm=document.querySelector(".Month").value;
+const yyyy=document.querySelector(".Year").value;
 
 Dob=`${dd}-${mm}-${yyyy} `;
 
