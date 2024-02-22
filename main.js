@@ -1,34 +1,50 @@
-
-const Submit=document.querySelector("button");
-
-
-var Dob=`00-00-0000 `;
-Submit.addEventListener("click",function(event){
-
-event.preventDefault();
-const dd=document.getElementById("Date").value;
-
-const mm=document.querySelector(".Month").value;
-const yyyy=document.querySelector(".Year").value;
-
-Dob=`${dd}-${mm}-${yyyy} `;
-
-console.log(Dob);
-}
-);
+var Dob = `1998-07-10`;
+const Submit = document.querySelector("button");
+var d, m, y, birthDate, age;
 
 
 
+Submit.addEventListener("click", function (event) {
 
-/*Define the EPOCH date
+    event.preventDefault();
+
+
+
+    const dd = document.querySelector("#Date");
+
+    const mm = document.querySelector(".Month");
+    const yyyy = document.querySelector(".Year");
+
+    d = (dd.value);
+    m = (mm.value);
+    y = (yyyy.value);
+
+    console.log(d);
+
+    Dob = `${y}-${m}-${d}`;
+    birthDate = new Date(Dob);
+    // console.log(birthDate);
+    age = calculateAge(birthDate);
+    console.log(age);
+    displayResult();
+
+
+
+
+});
+
+
+
+
+//Define the EPOCH date
 const EPOCH = new Date(0);
 const EPOCH_YEAR = EPOCH.getUTCFullYear(); // EPOCH_YEAR = 1970
 const EPOCH_MONTH = EPOCH.getUTCMonth();    // EPOCH_MONTH = 0 (January)
 const EPOCH_DAY = EPOCH.getUTCDate();      // EPOCH_DAY = 1
 
 
- * @param {Date} birthDate
- 
+// * @param { Date } birthDate
+
 const calculateAge = birthDate => {
     // Calculate the difference between the current date and the birth date
     const diff = new Date(Date.now() - birthDate.getTime());
@@ -46,10 +62,16 @@ const calculateAge = birthDate => {
     };
 };
 
-// Birth date: July 25, 2000
-const birthDate = new Date(2000, 6, 25); // Note: Months are zero-based, so 6 represents July
+function displayResult() {
+    const blanks = document.querySelectorAll("span");
+    const value1 = document.createElement("span");
+    value1.textContent = age.years;
+    blanks[0].parentNode.replaceChild(value1, blanks[0]);
+    const value2 = document.createElement("span");
+    value2.textContent = age.months;
+    blanks[1].parentNode.replaceChild(value2, blanks[1]);
 
-// Calculate the age
-const age = calculateAge(birthDate);
-
-console.log(age);*/
+    const value3 = document.createElement("span");
+    value3.textContent = age.days;
+    blanks[2].parentNode.replaceChild(value3, blanks[2]);
+}
