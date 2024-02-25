@@ -10,7 +10,7 @@ Submit.addEventListener("click", function (event) {
 
 
 
-    const dd = document.querySelector("#Date");
+    const dd = document.querySelector(".Date");
 
     const mm = document.querySelector(".Month");
     const yyyy = document.querySelector(".Year");
@@ -25,7 +25,7 @@ Submit.addEventListener("click", function (event) {
     birthDate = new Date(Dob);
     // console.log(birthDate);
     age = calculateAge(birthDate);
-    console.log(age);
+    
     displayResult();
 
 
@@ -45,12 +45,16 @@ const EPOCH_DAY = EPOCH.getUTCDate();      // EPOCH_DAY = 1
 
 // * @param { Date } birthDate
 
-const calculateAge = birthDate => {
+function calculateAge(birthDate){
     // Calculate the difference between the current date and the birth date
     const diff = new Date(Date.now() - birthDate.getTime());
+    // console.log(`${Date.now()} - ${birthDate.getTime()}`);
+
+    // console.log(diff);
 
     // Calculate the age in years, months, and days
     const years = Math.abs(diff.getUTCFullYear() - EPOCH_YEAR);   // years = 2024 - 2000 = 24
+    // console.log(`${diff.getUTCFullYear()} - ${EPOCH_YEAR}=${years}`);
     const months = Math.abs(diff.getUTCMonth() - EPOCH_MONTH);    // months = 1 - 6 = 5
     const days = Math.abs(diff.getUTCDate() - EPOCH_DAY);         // days = 14 - 25 = 11
 
