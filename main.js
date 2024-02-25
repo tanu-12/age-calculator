@@ -19,8 +19,6 @@ Submit.addEventListener("click", function (event) {
     m = (mm.value);
     y = (yyyy.value);
 
-    console.log(d);
-
     Dob = `${y}-${m}-${d}`;
     birthDate = new Date(Dob);
     // console.log(birthDate);
