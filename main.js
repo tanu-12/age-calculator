@@ -1,5 +1,5 @@
 var Dob = `1998-07-10`;
-const Submit = document.querySelector("button");
+const Submit = document.querySelector(".arrow");
 var d, m, y, birthDate, age;
 
 

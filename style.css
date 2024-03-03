@@ -44,3 +44,30 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
+
+/*--css variables--*/
+.root{
+
+--Purple: hsl(259, 100%, 65%);
+--Light-red: hsl(0, 100%, 67%);
+
+--White: hsl(0, 0%, 100%);
+--Off-white: hsl(0, 0%, 94%);
+--Light-grey: hsl(0, 0%, 86%);
+--Smokey-grey: hsl(0, 1%, 44%);
+--Off-black: hsl(0, 0%, 8%);
+}
+
+.arrow{
+  display:flex;
+  justify-content: center;
+  align-content: center;
+
+}
+.hline{
+  width: 100%;
+  height:1px;
+  border:black 1px solid;
+  margin:1.5em auto;
+}
