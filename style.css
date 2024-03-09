@@ -57,6 +57,8 @@ p, h1, h2, h3, h4, h5, h6 {
 --Light-grey: hsl(0, 0%, 86%);
 --Smokey-grey: hsl(0, 1%, 44%);
 --Off-black: hsl(0, 0%, 8%);
+--padding:2rem;
+--spacing:.5rem;
 }
 
 
@@ -64,17 +66,12 @@ p, h1, h2, h3, h4, h5, h6 {
 .flex-group{
   display:flex;
   
-  
-  
-  
-
 }
+
  .hline{
-  position: absolute;
-  top: 18
-  height: 5px;
-  width: 100%;
-  background-color: black;
+  width:90%;
+  margin:1.5em auto;
+  border:1px solid var(--Smokey-grey);
 }
 /* general styling*/
 
@@ -88,11 +85,12 @@ body{
 }
 
 .card{
-  --padding:0.75rem;
-  --spacing:.5rem;
+ 
   border-radius: 0.75rem;
   overflow:hidden;
   background-color: var(--White);
+  padding: var(--padding);
+  spacing:var(--spacing);
   /* max-width:500px; */
   ;
   }
