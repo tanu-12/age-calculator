@@ -59,17 +59,31 @@ p, h1, h2, h3, h4, h5, h6 {
 --Off-black: hsl(0, 0%, 8%);
 --padding:2rem;
 --spacing:.5rem;
+
+
+
+/*font*/
+
+--fb:700;
+--i:italic;
+--fri:400;
+--fbi:800;
+
+
 }
 
 
 
 .flex-group{
   display:flex;
+  gap:var(--spacing);
+  
+ 
   
 }
 
  .hline{
-  width:90%;
+  width:100%;
   margin:1.5em auto;
   border:1px solid var(--Smokey-grey);
 }
@@ -82,16 +96,34 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+
+}
+label{
+  font-style: normal;
+  font-weight: var(--fri);
+  color: var(--Smokey-grey);
+
+}
+span{
+  color:var(--Purple);
+
+}
+
+.arrow_button{
+  background-color: var(--Purple);
+  border-radius: 45%;
+  border-style: none;
 }
 
 .card{
- 
-  border-radius: 0.75rem;
+  
+  
   overflow:hidden;
   background-color: var(--White);
-  padding: var(--padding);
-  spacing:var(--spacing);
-  /* max-width:500px; */
+  padding:  8rem  var(--padding);
+  
+  max-width:500px; 
   ;
   }
 .age_data{
@@ -99,4 +131,12 @@ display: flex;
 flex-direction: column;
 overflow: hidden;
 
+}
+.arrow{
+  margin-top: 1rem;
+  display: flex;
+}
+.result{
+  font-size: var(--fbi);
+  font-style: var(--i);
 }
