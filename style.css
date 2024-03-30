@@ -97,6 +97,7 @@ body{
   align-items: center;
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
+  font-size: 32px;
 
 }
 label{
@@ -137,6 +138,16 @@ overflow: hidden;
   display: flex;
 }
 .result{
-  font-size: var(--fbi);
+  font-weight: var(--fbi);
   font-style: var(--i);
+}
+
+
+input:invalid{
+  box-shadow: 0 0 5px 1px red;
+
+
+}
+input:focus:invalid{
+  box-shadow: none;
 }
